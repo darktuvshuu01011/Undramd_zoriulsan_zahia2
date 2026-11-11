@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e9f1ed">
+<title>A little note for Undram ♡</title>
+<style>
+*{box-sizing:border-box}
+:root{--ink:#274c4b;--sea:#4e8580;--sand:#f6f0e4;--coral:#d58b78}
+body{margin:0;min-height:100vh;padding:22px 15px;display:grid;place-items:center;
+font-family:Georgia,"Times New Roman",serif;color:var(--ink);
+background:linear-gradient(160deg,#dcebe4 0%,#f4eee1 48%,#e7d9c7 100%)}
+.card{width:min(100%,510px);background:#fffdf7;border:1px solid #e7dfcf;border-radius:9px;
+padding:27px 23px;box-shadow:0 18px 50px #294d4826;position:relative}
+.card:before{content:"";position:absolute;inset:9px;border:1px dashed #d9cbb7;pointer-events:none}
+.inner{position:relative}
+.topline{display:flex;justify-content:space-between;align-items:center;font:10px Arial,sans-serif;
+letter-spacing:2px;text-transform:uppercase;color:#78918a}
+.stamp{width:43px;height:48px;border:1px solid #d7a18f;display:grid;place-items:center;color:#c47c6d;font-size:21px}
+.hero{text-align:center;margin:23px 0 15px}
+.sun{width:82px;height:82px;margin:auto;border-radius:50%;background:linear-gradient(145deg,#f3c99b,#df967f);
+display:grid;place-items:center;box-shadow:0 0 0 8px #f4e7d6;font-size:37px}
+h1{font-size:29px;font-weight:normal;margin:19px 0 7px;color:#315c57}
+.sub{font:11px Arial,sans-serif;letter-spacing:2px;color:#9a8b76;text-transform:uppercase}
+.intro{text-align:center;font:14px/1.7 Arial,sans-serif;color:#71847b;margin:10px auto 22px}
+.progress{font:11px Arial,sans-serif;letter-spacing:1px;color:#9a8b76;text-align:center;margin:15px 0}
+.question{font-size:19px;line-height:1.55;text-align:center;color:#315c57;margin:12px 2px 18px}
+.answers{display:grid;gap:10px}
+.answer{display:flex;align-items:center;gap:12px;width:100%;padding:13px 14px;border:1px solid #dedccc;
+border-radius:5px;background:#fbfaf4;color:#405e58;text-align:left;font:15px/1.4 Arial,sans-serif;cursor:pointer}
+.answer:hover{background:#f2f4eb;border-color:#9eb7a9}
+.letter{width:27px;height:27px;flex:0 0 27px;border-radius:50%;display:grid;place-items:center;
+background:#e7eee5;color:#477a73;font-weight:bold}
+.feedback{min-height:24px;text-align:center;font:13px Arial,sans-serif;color:#b66e60;margin:12px 0 0}
+#letterPage{display:none;animation:appear .7s ease both}
+.from{font:11px Arial,sans-serif;letter-spacing:1.5px;color:#a27d6d;text-transform:uppercase;margin:22px 0 13px}
+h2{text-align:center;font-weight:normal;font-size:25px;margin:0 0 22px;color:#315c57}
+.message{font-size:17px;line-height:1.85;white-space:pre-line;color:#405e58;overflow-wrap:anywhere}
+.end{text-align:center;margin:23px 0 3px;color:#c27e6d;font-size:20px}
+.footer{border-top:1px solid #e7dfcf;margin-top:22px;padding-top:14px;text-align:center;font:10px Arial,sans-serif;letter-spacing:2px;color:#9b9a83}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#letterPage{animation:none}}
+</style>
+</head>
+<body>
+<main class="card"><div class="inner">
+<div class="topline"><span>Зүрхнээс очих захиа кк</span><div class="stamp">♡</div></div>
+
+<section id="quizPage">
+  <div class="hero">
+    <div class="sun">❤️</div>
+    <h1>Хөөрхөн Ундрам-д</h1>
+  </div>
+  <p class="intro">Захиагаа нээхийн өмнө 3 асуултад хариулаарай ххи ♡</p>
+  <div class="progress" id="progress">Асуулт 1 OF 3</div>
+  <div class="question" id="question"></div>
+  <div class="answers" id="answers"></div>
+  <div class="feedback" id="feedback" role="status"></div>
+</section>
+
+<section id="letterPage">
+  <div class="hero" style="margin:20px 0 12px"><div class="sub">Захиа#2</div></div>
+  <p class="from">From: Tuvshu1</p>
+  <h2>Үзэсгэлэнт Ундрамдаа</h2>
+  <div class="message">Өглөөний мэндээ😇
+Өнөөдөрт нь амжилт хүсэе эрч хүчтэй байгаарай. ❤️
+Аяллынхаа мөч бүрийг сайхан мэдрээд, зөндөө гоё дурсамж бүтээгээрэй. Нарны тосоо түрхэж, ус сайн ууж, хоолоо цагт нь идээрэй. Бас хэт ядартлаа битгий яваарай, сайн амарч байгаарай.
+
+Санаад байх юм оо. Хааяа гэнэт2 нялга үнсмээр, аймар тэвэрмээр санагдах юм аа. Ууг нь ч одоо хэдхэн өдөр юмдаа тэ, хөөрхөн чамтайгаа уулзах өдрийг тэсэн ядан хүлээж байя🤭</div>
+  <div class="footer">SENDING YOU A HUG FROM MONGOLIA</div>
+</section>
+</div></main>
+
+<script>
+const questions = [
+ {q:"1. Хорвоо ертөнцийн хамгийн хөөрхөн, үзэсгэлэнтэй, ухаантай, мэдрэмжтэй охин хэн бэ?",
+  a:["Lebron James","Цасан цагаан","Ундрам❤️","Үнсгэлжин"],correct:2},
+ {q:"2. Бидний анх хотод уулзаж алхсан өдөр аль нь вэ?",
+  a:["2026.07.26","2026.09.29","2025.12.14","2026.03.27"],correct:0},
+ {q:"3. Хамгийн хөөрхөн нүдтэй, хөөрхөн хамартай, хөөрхөн уруултай нь аль нь вэ?",
+  a:["Misha master","Shrek","Marketing Suhee","Undram❤️"],correct:3}
+];
+let current=0;
+const letters=["A","B","C","D"];
+function renderQuestion(){
+ const item=questions[current];
+ document.getElementById("progress").textContent=`QUESTION ${current+1} OF 3`;
+ document.getElementById("question").textContent=item.q;
+ document.getElementById("feedback").textContent="";
+ const holder=document.getElementById("answers");
+ holder.innerHTML="";
+ item.a.forEach((answer,index)=>{
+   const button=document.createElement("button");
+   button.className="answer";
+   const letter=document.createElement("span");
+   letter.className="letter";
+   letter.textContent=letters[index];
+   const label=document.createElement("span");
+   label.textContent=answer;
+   button.append(letter,label);
+   button.addEventListener("click",()=>choose(index));
+   holder.appendChild(button);
+ });
+}
+function choose(index){
+ if(index!==questions[current].correct){
+   document.getElementById("feedback").textContent="Өө, дахиад нэг бодоод үзээрэй 🤭❤️";
+   return;
+ }
+ current++;
+ if(current<questions.length){renderQuestion();}
+ else{
+   document.getElementById("quizPage").style.display="none";
+   document.getElementById("letterPage").style.display="block";
+ }
+}
+renderQuestion();
+</script>
+</body>
+</html>
